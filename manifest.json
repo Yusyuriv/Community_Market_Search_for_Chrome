@@ -1,0 +1,22 @@
+{
+	"name": "Community Market Search",
+	"description": "Add-on that adds a context menu that allows users to easily search on Community Market.",
+	"version": "0.0.1",
+	"permissions": ["contextMenus"],
+	"background": {
+		"scripts": ["script.js"]
+	},
+	"icons": {
+		"16": "images/16.png",
+		"32": "images/32.png",
+		"48": "images/48.png",
+		"96": "images/96.png",
+		"128": "images/128.png",
+		"256": "images/256.png",
+		"512": "images/512.png"
+	},
+	"manifest_version": 2,
+	"homepage_url": "http://lab.nyan.link/community-market-search/",
+	"short_name": "CM Search",
+	"author": "Yusyuriv"
+}
