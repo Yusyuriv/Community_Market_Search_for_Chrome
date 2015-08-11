@@ -1,7 +1,7 @@
 {
 	"name": "Community Market Search",
 	"description": "Add-on that adds a context menu that allows users to easily search on Community Market.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"permissions": ["contextMenus"],
 	"background": {
 		"scripts": ["script.js"]

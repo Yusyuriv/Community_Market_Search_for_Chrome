@@ -1,4 +1,6 @@
-var genericSearch = function(query, section) {
+var genericSearch = function(info) {
+  var query = info.selectionText;
+  var section = menuIds[info.menuItemId];
   var sections = {
     EMOTICONS: 'tag_item_class_4',
     BACKGROUNDS: 'tag_item_class_3',
@@ -15,37 +17,29 @@ var genericSearch = function(query, section) {
 var ctx = ['selection'];
 
 var menus = [{
-  label: "Search emoticons",
-  click: function(info, tab) {
-    genericSearch(info.selectionText, 'EMOTICONS');
-  }
+  textId: 'EMOTICONS',
+  label: "Search emoticons"
 }, {
-  label: 'Search trading cards',
-  click: function(info, tab) {
-    genericSearch(info.selectionText, 'CARDS');
-  }
+  textId: 'CARDS',
+  label: 'Search trading cards'
 }, {
-  label: 'Search profile backgrounds',
-  click: function(info, tab) {
-    genericSearch(info.selectionText, 'BACKGROUNDS');
-  }
+  textId: 'BACKGROUNDS',
+  label: 'Search profile backgrounds'
 }, {
-  label: 'Search booster packs',
-  click: function(info, tab) {
-    genericSearch(info.selectionText, 'BOOSTERS');
-  }
+  textId: 'BOOSTERS',
+  label: 'Search booster packs'
 }, {
-  label: 'Search everything',
-  click: function(info, tab) {
-    genericSearch(info.selectionText);
-  }
+  textId: null,
+  label: 'Search everything'
 }];
+var menuIds = {};
 
 for (var i = 0; i < menus.length; i++) {
   var menu = menus[i];
-  chrome.contextMenus.create({
+  var menuId = chrome.contextMenus.create({
     title: menu.label,
-    onclick: menu.click,
+    onclick: genericSearch,
     contexts: ctx
   });
+  menuIds[menuId] = menu.textId;
 }
