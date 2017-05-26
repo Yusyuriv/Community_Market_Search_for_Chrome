@@ -1,7 +1,7 @@
 {
 	"name": "Community Market Search",
-	"description": "Add-on that adds a context menu that allows users to easily search on Community Market.",
-	"version": "0.0.2",
+	"description": "Browser extension that adds a context menu that allows users to easily search on Community Market.",
+	"version": "1.1.4",
 	"permissions": ["contextMenus"],
 	"background": {
 		"scripts": ["script.js"]
@@ -17,6 +17,5 @@
 	},
 	"manifest_version": 2,
 	"homepage_url": "http://lab.nyan.link/community-market-search/",
-	"short_name": "CM Search",
-	"author": "Yusyuriv"
+	"short_name": "CM Search"
 }
